@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// :: siguinifica que estamos aecssando um método estático da classe
+Route::get('/', ['uses' => 'Controller@homepage']);
+Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
+Route::get('/login', ['uses' => 'Controller@logar']);
